@@ -1,46 +1,84 @@
-# Getting Started with Create React App
+<h1 align="center">
+  :clipboard: React Trello Clone :clipboard:
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h4 align="center">
+  A Web Application where users can create and manage their tasks, designed to be similar to the famous <a href="https://trello.com">Trello</a> application
+</h4>
 
-## Available Scripts
+<p align="center">
+  <img alt="Repo's top language" src="https://img.shields.io/static/v1?label=Main%20technology&message=React.js&style=for-the-badge&color=24B36B&labelColor=000000">
+</p>
 
-In the project directory, you can run:
+<p align="center">
+  <a href="#technologies">Used Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#objective">The project's objective</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#final-result">Final Result</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#how-to-use">How to Run</a>
+</p>
 
-### `npm start`
+<p align="center">
+  <img width="750" src="screenshots/1.png" /> <br>
+  <a href="https://vadiimvooo.github.io/trello-app-react/" target="_blank">
+    <img alt="Demo on GH Pages" src="https://vadiimvooo.github.io/trello-app-react/">
+  </a>
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h2 id="techonologies" name="technologies">
+  :rocket: Used Technologies
+</h2>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [React.js](https://react.dev/) to build all the app in general
+- [React Beautiful Dnd](https://github.com/atlassian/react-beautiful-dnd) to build the drag and drop feature
+- [Sass](https://sass-lang.com/) to style the app
+- [Moment](https://www.npmjs.com/package/moment) to get the last moment the card was updated
+- [Node.js](https://nodejs.org/en) for creating [API](https://github.com/vadiimvooo/trello-clone-api) with using framework [Express.js](https://expressjs.com/)
+- [PostgreSql](https://www.postgresql.org/) was used for storing Data
+- [Railway](https://railway.app/) for deploying the DB and [API](https://github.com/vadiimvooo/trello-clone-api)
+- [Sequelize](https://sequelize.org/) for connection between [API](https://github.com/vadiimvooo/trello-clone-api) and DB
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<h2 id="objective" name="objective">
+  :dart: The project's objective
+</h2>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The aim of this project was practicing React.js and also learning how drag and drop works and how to do it with React.js, I really enjoyed developing it and liked the final result!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<h2 id="final-result" name="final-result">
+  :clipboard: Final Result
+</h2>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### [You can check the app running clicking here](https://vadiimvooo.github.io/trello-app-react/)
 
-### `npm run eject`
+<h2 id="how-to-use" name="how-to-use">
+  :information_source: How to Run
+</h2>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Follow the steps below to run the application on your computed, first of all, you'll need to have these tools installed on your computer: Git, Node.js and the React<br>
+If you have all of these tools installed on your computer, just follow the steps below:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# Clone the repository in some directory of your computer
+$ git clone https://github.com/vadiimvooo/trello-app-react.git
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Enter in the repository
+$ cd trello-app-react
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Install the dependencies
+$ npm install
 
-## Learn More
+# Start the app
+$ npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+After following these steps, the terminal will show you in which port it's running, it's on the port 8080 usually, so, you'll just need to enter in your browser and
+type `localhost:8080`, then you'll see the app running. When you want to stop it, go to the terminal that you used to start the app, and type <kbd>CTRL</kbd>+<kbd>C</kbd>,
+this way you'll stop the app
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+
+Hope you enjoyed this project :smiley:<br>
+:wave: [Get in touch!](https://www.linkedin.com/in/vadym-voiedilo)
+
+### Author: [Vadym Voiedilo](https://www.linkedin.com/in/vadym-voiedilo)

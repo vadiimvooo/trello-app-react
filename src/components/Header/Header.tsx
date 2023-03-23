@@ -13,6 +13,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { NavLink } from 'react-router-dom'
 import cn from 'classnames';
 import s from './Header.module.scss';
+import { Link } from 'react-router-dom';
 
 type Page = {
   name: string,
@@ -41,18 +42,20 @@ export function Header() {
             variant="h6"
             noWrap
             component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'Poppins',
+            }}
+          >
+            <Link to="/" style={{
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
-            }}
-          >
-            TrelloClone
+            }}>
+              TrelloClone
+            </Link>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -107,19 +110,20 @@ export function Header() {
             variant="h5"
             noWrap
             component="a"
-            href=""
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
-              fontFamily: 'monospace',
+            }}
+          >
+            <Link to="/" style={{
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
-            }}
-          >
-            TrelloClone
+            }}>
+              TrelloClone
+            </Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
