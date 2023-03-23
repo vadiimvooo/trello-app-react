@@ -35,7 +35,7 @@ const TrelloCard: React.FC<Props> = ({title, date, id, index}) => {
               flexDirection: 'column',
             }}
           >
-            <Typography sx={{ width: '100%' }} gutterBottom style={{wordBreak: 'break-all'}}>
+            <Typography sx={{ width: '100%' }} gutterBottom style={{wordBreak: 'break-all'}} className={styles.trelloCardTitle}>
               {title}
             </Typography>
 
@@ -54,11 +54,16 @@ const TrelloCard: React.FC<Props> = ({title, date, id, index}) => {
                 </Chip>
               </div>
 
-              <Typography fontSize={12} sx={{ 
-                minWidth: 'content-size', 
-                paddingLeft: '10px', 
-                alignSelf: 'flex-end'
-              }} gutterBottom>
+              <Typography 
+                fontSize={12} 
+                sx={{ 
+                  minWidth: 'content-size', 
+                  paddingLeft: '10px', 
+                  alignSelf: 'flex-end'
+                }} 
+                gutterBottom
+                className={styles.trelloCardDate}
+              >
                 {normalizedDate}
               </Typography>
             </div>
