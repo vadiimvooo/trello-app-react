@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useCallback, useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -22,15 +22,15 @@ type Page = {
 const pages: Page[] = [{name: 'Main', link: '/'}, {name: 'Tasks', link: '/tasks'}];
 
 export function Header() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
+  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+  const handleOpenNavMenu = useCallback((event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
-  };
+  }, []);
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = useCallback(() => {
     setAnchorElNav(null);
-  };
+  }, []);
 
   return (
     <AppBar position="static">

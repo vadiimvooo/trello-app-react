@@ -2,7 +2,7 @@ import { Button, FormControl, FormHelperText, Modal, TextField, Typography as Ty
 import { Box as Boxx} from '@mui/system';
 import cn from 'classnames';
 import SendIcon from '@mui/icons-material/Send';
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import s from './ModalWindow.module.scss';
 import { useAppDispatch } from '../../hooks/redux-hooks';
 import { addList, updateList } from '../../reducers/listsSlice';
@@ -46,7 +46,7 @@ export const ModalWindow: React.FC<Props> = ({
   const [isEmptyTitle, setIsEmptyTitle] = useState(false);
   const dispath = useAppDispatch();
 
-  const handleTitleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleTitleChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     setCurrentTitle(event.target.value);
 
     const titleErrorCondition = event.target.value === '';
@@ -56,9 +56,9 @@ export const ModalWindow: React.FC<Props> = ({
     } else {
       setIsEmptyTitle(false);
     }
-  };
+  }, []);
 
-  const handleClick = (event: React.FormEvent) => {
+  const handleClick = useCallback((event: React.FormEvent) => {
     event.preventDefault();
 
     switch(action) {
@@ -88,9 +88,9 @@ export const ModalWindow: React.FC<Props> = ({
     
     closeWindow();
     setCurrentTitle('');
-  }
+  }, [action, closeWindow, currentTitle, dispath, id]);
 
-  const addEmoji = (emoji: string) => () => setCurrentTitle(prev => `${prev}${emoji}`);
+  const addEmoji = useCallback((emoji: string) => () => setCurrentTitle(prev => `${prev}${emoji}`), []);
   return (
     <Modal
       open={isOpened}

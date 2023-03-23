@@ -5,6 +5,7 @@ import { DragDropContext } from 'react-beautiful-dnd';
 import { useAppDispatch, useAppSelector } from './hooks/redux-hooks';
 import { sortTasks } from './reducers/tasksSlice';
 import { Loader } from './components/Loader';
+import { useCallback } from 'react';
 
 function App() {
   const dispatch = useAppDispatch();
@@ -12,7 +13,7 @@ function App() {
   const { loading: loadingLists } = useAppSelector(state => state.lists);
 
 
-  const onDragEnd = (result: any) => {
+  const onDragEnd = useCallback((result: any) => {
     const { destination, draggableId } = result;
 
     if (!destination) {
@@ -24,7 +25,7 @@ function App() {
       newPosition: Number(destination.index),
       newListId: Number(destination.droppableId)
     }));
-  };
+  }, [dispatch]);
 
   return (
     <>

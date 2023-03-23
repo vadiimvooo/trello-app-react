@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { Task } from '../../types/TypeForTask';
 import TrelloCard from '../TrelloCard/TrelloCard';
 import s from './TrelloList.module.scss';
@@ -50,13 +50,13 @@ const TrelloList: React.FC<Props> = ({ id, title, tasks }) => {
       break;
   }
 
-  const handleCloseEdit = () => {
+  const handleCloseEdit = useCallback(() => {
     setOpenEdit(false);
-  }
+  }, []);
 
-  const handleCloseAddtask = () => {
+  const handleCloseAddtask = useCallback(() => {
     setOpenAddTask(false);
-  }
+  }, []);
 
   return (
     <>

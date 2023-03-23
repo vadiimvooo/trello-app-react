@@ -1,7 +1,7 @@
 import { Button, Card, CardActions, Typography } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import s from './CreateList.module.scss';
 import { ModalWindow } from '../ModalWindow';
 import { ActionTypeModal } from '../../types/ActionTypeModal';
@@ -9,13 +9,13 @@ import { ActionTypeModal } from '../../types/ActionTypeModal';
 export const CreateList = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleModalOpen = () => {
+  const handleModalOpen = useCallback(() => {
     setIsModalOpen(true);
-  };
+  }, []);
 
-  const handleModalClose = () => {
+  const handleModalClose = useCallback(() => {
     setIsModalOpen(false);
-  };
+  }, []);
 
   return (
     <>
