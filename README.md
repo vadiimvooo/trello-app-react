@@ -18,7 +18,7 @@
 </p>
 
 <p align="center">
-  <img width="750" src="https://prnt.sc/bDgVeo4ts5ww" /> <br>
+  <img width="750" src="./photos/demo-photo.png" /> <br>
   <a href="https://vadiimvooo.github.io/trello-app-react/" target="_blank">
     <img alt="Demo on GH Pages" width="200" src="./photos/gh-pages-link.png">
   </a>
