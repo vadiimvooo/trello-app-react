@@ -1,0 +1,13 @@
+.trelloCardBottomBlock {
+  display: flex;
+  justify-content: space-between;
+}
+
+.trelloCardRemoveButton {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.trelloCard:hover .trelloCardRemoveButton {
+  opacity: 1;
+}
