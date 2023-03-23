@@ -18,9 +18,9 @@
 </p>
 
 <p align="center">
-  <img width="750" src="screenshots/1.png" /> <br>
+  <img width="750" src="https://prnt.sc/bDgVeo4ts5ww" /> <br>
   <a href="https://vadiimvooo.github.io/trello-app-react/" target="_blank">
-    <img alt="Demo on GH Pages" src="https://vadiimvooo.github.io/trello-app-react/">
+    <img alt="Demo on GH Pages" src="./photos/gh-pages-link.png">
   </a>
 </p>
 
@@ -79,6 +79,6 @@ this way you'll stop the app
 ---
 
 Hope you enjoyed this project :smiley:<br>
-:wave: [Get in touch!](https://www.linkedin.com/in/vadym-voiedilo)
+:wave: [Get in touch!](https://www.linkedin.com/in/vadym-voiedilo-131283264/)
 
-### Author: [Vadym Voiedilo](https://www.linkedin.com/in/vadym-voiedilo)
+### Author: [Vadym Voiedilo](https://www.linkedin.com/in/vadym-voiedilo-131283264/)
